@@ -1,0 +1,18 @@
+a[1].
+a[1].privatekey
+a.length
+len(a);
+len(a)
+a[1]
+a=await ethers.getSigners();
+a=ethers.getSigners();
+let a=ethers.getSigners();
+let a=ethers
+a
+let a=await ethers.getSigner();
+a[1]
+a
+a=await ethers.getSigner()
+a[1].address
+a
+a=ethers.getSigner()

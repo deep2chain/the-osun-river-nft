@@ -6,10 +6,10 @@ const contract = require("../artifacts/contracts/OsunRiverNFT.sol/TorNFT.json");
 const METAMASK_PUBLIC_KEY = process.env.METAMASK_PUBLIC_KEY;
 const METAMASK_PRIVATE_KEY = process.env.METAMASK_PRIVATE_KEY;
 
-const contractAddress = "0x9436f34035a4885650C8311cA24e3E2DeD2FF0a2"; // the hash of the smart contract to be used in minting this NFT
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // the hash of the smart contract to be used in minting this NFT
 const nftContract = new alchemyWeb3.eth.Contract(contract.abi, contractAddress);
 
-async function mintNFT(tokenURI) {
+async function createNFT(tokenURI) {
   // get the nonce - nonce is needed for security reasons. It keeps track of the number of
   // transactions sent from your address and prevents replay attack.
   const nonce = await alchemyWeb3.eth.getTransactionCount(
@@ -57,4 +57,4 @@ async function mintNFT(tokenURI) {
     });
 }
 
-mintNFT("https://ipfs.io/ipfs/QmdZMtdApdeobM5iCRcWqAMByfG4No8tW4oheb7jQjKgTm") // pass the CID to the JSON file uploaded to Pinata
+createNFT("https://ipfs.io/ipfs/QmdZMtdApdeobM5iCRcWqAMByfG4No8tW4oheb7jQjKgTm") // pass the CID to the JSON file uploaded to Pinata
